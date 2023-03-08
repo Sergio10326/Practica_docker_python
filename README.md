@@ -51,7 +51,19 @@ services:
     working_dir: /usr/src/app
     command: python3
 ```
-4. Imagen creada personalizada subida (enlace)
+4. Construcción de la nueva imagen
+
+La creación de la imagen se hace con el comando "docker build". Para poder llevarlo a cabo, se usa este comando con el fichero "Dockerfile" y se ejecutaría de la siguiente forma:
+```
+docker build -t nombreimagen:version .
+```
+Ahora, toca comprobar que la imagen se ha ejecutado correctamente. Para ello, debe estar levantado el contenedor previamente y se ejecuta el comando:
+```
+docker run python3
+```
+La salida de este comando debe ser la del script de python que tenemos asociado a la imagen. En este caso. descargaría el vídeo seleccionado.
+
+6. Imagen creada personalizada subida (enlace)
 
 https://hub.docker.com/layers/sergio10326/youtubeimage/latest/images/sha256-9c7f454c74408d05b722d325a9b24c8c81ecabf99b690bbba2cc0814c3f0583a?tab=layers
 
