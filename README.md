@@ -8,7 +8,7 @@ El script que se necesita usar para esta práctica es uno de python en el que se
 from pytube import YouTube
 
 #link = input("Enter the link: ")
-yt = YouTube("https://www.youtube.com/watch?v=aFqTjk3kcEw&ab_channel=Garajedeideas")
+yt = YouTube("https://www.youtube.com/watch?v=C2Ru1128zgo")
 
 #Title of video
 print("Title: ",yt.title)
@@ -57,11 +57,11 @@ La creación de la imagen se hace con el comando "docker build". Para poder llev
 ```
 docker build -t nombreimagen:version .
 ```
-Ahora, toca comprobar que la imagen se ha ejecutado correctamente. Para ello, debe estar levantado el contenedor previamente y se ejecuta el comando:
+El comando, usando esta estructura recoge el fichero "Dockerfile" en la que se ejecuta el comando, con lo que en caso de tener este en otra ruta, hay que introducirla manualmente. Ahora, toca comprobar que la imagen se ha ejecutado correctamente. Para ello, debe estar levantado el contenedor previamente y se ejecuta el comando:
 ```
 docker run python3
 ```
-La salida de este comando debe ser la del script de python que tenemos asociado a la imagen. En este caso. descargaría el vídeo seleccionado.
+La salida de este comando debe ser la del script de python que tenemos asociado a la imagen. En este caso, descargará el vídeo seleccionado (En caso de querer descargar otro, hay que cambiar el enlace que se carga en el script y borrar y crear la imagen o hacer una aparte cambiando la extensión de la versión de esta).
 
 6. Imagen creada personalizada subida (enlace)
 
